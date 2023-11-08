@@ -8,3 +8,9 @@ cd into the cloned repo and run
 ```bash
 stow */
 ```
+
+stuff you need installed:
+- [asdf](https://asdf-vm.com/)
+- gnu stow (find it in your distro's repos)
+- git (obviously)
+
