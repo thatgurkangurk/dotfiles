@@ -1,0 +1,12 @@
+[init]
+	defaultBranch = main
+[user]
+	email = hello@gurkz.me
+	name = Gurkan
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs1EpgmgaRHJW1rcX47sN2Kz2rSfRyrT4iAZ/BDA0co
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
