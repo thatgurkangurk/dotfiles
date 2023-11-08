@@ -14,3 +14,5 @@ stuff you need installed:
 - gnu stow (find it in your distro's repos)
 - git (obviously)
 
+recommended stuff:
+- [asdf-nodejs](https://github.com/asdf-vm/asdf-nodejs)
