@@ -3,3 +3,4 @@ if status is-interactive
 end
 
 mise activate fish | source
+starship init fish | source
