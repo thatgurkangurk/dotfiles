@@ -1,7 +1,7 @@
 [gpg]
         format = ssh
 [gpg "ssh"]
-        program = /opt/1Password/op-ssh-sign
+	program = "/mnt/c/Users/gurkan/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe"
 [commit]
         gpgsign = true
 [user]
