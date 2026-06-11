@@ -10,3 +10,5 @@
         email = "hello@gurkz.me"
 [init]
 defaultBranch = main
+[core]
+	sshCommand = ssh.exe
