@@ -1,0 +1,20 @@
+[gpg]
+        format = ssh
+
+[gpg "ssh"]
+    {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+    # wsl
+    program = /mnt/c/Users/gurkan/AppData/Local/1Password/app/8/op-ssh-sign.exe
+    {{- else }}
+    # non-wsl
+    program = /opt/1Password/op-ssh-sign
+    {{- end }}
+
+[commit]
+        gpgsign = true
+[user]
+        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKs1EpgmgaRHJW1rcX47sN2Kz2rSfRyrT4iAZ/BDA0co
+        name = "Gurkan"
+        email = "hello@gurkz.me"
+[init]
+defaultBranch = main
