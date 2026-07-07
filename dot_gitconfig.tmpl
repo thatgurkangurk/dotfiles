@@ -4,7 +4,7 @@
 [gpg "ssh"]
     {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
     # wsl
-    program = /mnt/c/Users/gurkan/AppData/Local/1Password/app/8/op-ssh-sign.exe
+    program = /mnt/c/Users/gurkan/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe
     {{- else }}
     # non-wsl
     program = /opt/1Password/op-ssh-sign

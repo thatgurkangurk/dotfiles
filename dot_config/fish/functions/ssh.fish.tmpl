@@ -1,0 +1,7 @@
+function ssh --description 'wrapper for ssh on WSL'
+{{ if and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+    ssh.exe $argv
+{{ else }}
+    command ssh $argv
+{{ end }}
+end
