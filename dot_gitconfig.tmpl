@@ -10,6 +10,13 @@
     program = /opt/1Password/op-ssh-sign
     {{- end }}
 
+[core]
+    {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+    sshCommand = "ssh.exe"
+    {{- else }}
+    sshCommand = "ssh"
+    {{- end }}
+
 [commit]
         gpgsign = true
 [user]
