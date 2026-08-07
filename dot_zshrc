@@ -33,3 +33,6 @@ setopt autocd
 
 # Allow Bash-style globbing
 unsetopt nomatch
+
+# nub
+export PATH="$HOME/.nub/bin:$PATH"
