@@ -1,0 +1,20 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+
+set -g fish_greeting
+set -g fish_color_autosuggestion 5f87af
+
+mise activate fish | source
+starship init fish | source
+
+{{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+set -gx BROWSER /usr/local/bin/wsl-open
+
+function xdg-open
+	/usr/local/bin/wsl-open $argv
+end
+
+{{- end }}
+
+test -d ~/.local/bin; and fish_add_path ~/.local/bin
