@@ -28,7 +28,7 @@ sudo_loop_interval = 240 # 4 minutes (240s); default if sudo_loop enabled
 # sudo_command = "sudo"
 
 # Disable specific steps - same options as the command line flag
-disable = ["firmware"]
+disable = ["firmware", "nix"]
 
 # Run these steps before all others
 first = ["chezmoi"]

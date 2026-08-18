@@ -5,6 +5,9 @@ end
 
 fish_add_path ~/.nix-profile/bin
 
+
+set -gx XDG_DATA_DIRS ~/.nix-profile/share $XDG_DATA_DIRS
+
 set -g fish_greeting
 set -g fish_color_autosuggestion 5f87af
 
@@ -24,3 +27,6 @@ test -d ~/.local/bin; and fish_add_path ~/.local/bin
 
 # nub
 set -gx PATH "$HOME/.nub/bin" $PATH
+
+# zed nix
+alias zed="nixGLIntel zeditor"
