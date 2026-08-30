@@ -24,7 +24,5 @@
     fzf
     topgrade
 
-    # gui apps
-    zed-editor
-  ];
+ ];
 }
