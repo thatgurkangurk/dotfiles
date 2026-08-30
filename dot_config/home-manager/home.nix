@@ -23,6 +23,7 @@
     bat
     fzf
     topgrade
+    gh
 
  ];
 }
