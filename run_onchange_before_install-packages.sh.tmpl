@@ -1,0 +1,23 @@
+#!/bin/sh
+# Brewfile hash: {{ include "executable_dot_Brewfile" | sha256sum }}
+# {{ if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux") -}}
+
+# source brew if it exists in normal locations
+[ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "[warning] pls install homebrew to get all cli tools"
+  exit 0
+fi
+
+BREWFILE="{{ .chezmoi.sourceDir }}/executable_dot_Brewfile"
+
+if [ -f "$BREWFILE" ]; then
+  echo "installing from brewfile"
+  brew bundle --file="$BREWFILE"
+else
+  echo "no brewfile found at $BREWFILE"
+fi
+
+# {{ end -}}
