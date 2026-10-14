@@ -14,13 +14,12 @@ set -g fish_color_autosuggestion 5f87af
 mise activate fish | source
 starship init fish | source
 
-{{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+{{- if and (hasKey .chezmoi "kernel") (hasKey .chezmoi.kernel "osrelease") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) }}
 set -gx BROWSER /usr/local/bin/wsl-open
 
 function xdg-open
-	/usr/local/bin/wsl-open $argv
+    /usr/local/bin/wsl-open $argv
 end
-
 {{- end }}
 
 test -d ~/.local/bin; and fish_add_path ~/.local/bin
