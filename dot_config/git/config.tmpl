@@ -2,7 +2,7 @@
         format = ssh
 
 [gpg "ssh"]
-    {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+    {{- if and (eq .chezmoi.os "linux") (hasKey .chezmoi.kernel "osrelease") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) }}
     # wsl
     program = /mnt/c/Users/gurkan/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe
     {{- else }}
@@ -11,7 +11,7 @@
     {{- end }}
 
 [core]
-    {{- if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+    {{- if and (eq .chezmoi.os "linux") (hasKey .chezmoi.kernel "osrelease") (contains "microsoft" (lower .chezmoi.kernel.osrelease)) }}
     sshCommand = "ssh.exe"
     {{- else }}
     sshCommand = "ssh"
