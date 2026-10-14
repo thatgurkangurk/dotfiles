@@ -20,7 +20,3 @@ setopt autocd
 
 # Allow Bash-style globbing
 unsetopt nomatch
-
-if command -v starship &> /dev/null; then
-    eval "$(starship init zsh)"
-fi

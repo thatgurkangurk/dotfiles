@@ -1,0 +1,8 @@
+if [ -d "$ZDOTDIR/config" ]; then
+  for file in "$ZDOTDIR/config"/*.zsh; do
+    [ -r "$file" ] && source "$file"
+  done
+  unset file
+fi
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
