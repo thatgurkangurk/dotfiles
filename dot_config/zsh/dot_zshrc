@@ -4,5 +4,3 @@ if [ -d "$ZDOTDIR/config" ]; then
   done
   unset file
 fi
-
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
