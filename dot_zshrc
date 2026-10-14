@@ -1,16 +1,3 @@
-autoload -U compinit
-compinit
-
-#allow tab completion in the middle of a word
-setopt COMPLETE_IN_WORD
-
-eval "$(starship init zsh)"
-
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-source /usr/share/fzf/shell/key-bindings.zsh
-
 # Ctrl + Arrow keybindings
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
@@ -33,6 +20,3 @@ setopt autocd
 
 # Allow Bash-style globbing
 unsetopt nomatch
-
-# nub
-export PATH="$HOME/.nub/bin:$PATH"
