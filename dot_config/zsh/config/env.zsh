@@ -21,6 +21,6 @@ setopt autocd
 # Allow Bash-style globbing
 unsetopt nomatch
 
-echo 'path+=("$HOME/.nix-profile/bin")' >> ~/.zshrc
+path+=("$HOME/.nix-profile/bin")
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#5f87af"
