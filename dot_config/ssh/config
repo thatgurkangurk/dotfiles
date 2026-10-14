@@ -1,0 +1,3 @@
+Host github.com
+  ServerAliveInterval 15
+  ServerAliveCountMax 3
