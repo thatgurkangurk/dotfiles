@@ -49,3 +49,6 @@ export HOMEBREW_BUNDLE_CLEANUP_NO_NPM=1
 
 export HOMEBREW_BUNDLE_DUMP_NO_KREW=1
 export HOMEBREW_BUNDLE_CLEANUP_NO_KREW=1
+
+typeset -U path
+path=(~/.local/bin $path)
